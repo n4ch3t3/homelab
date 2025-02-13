@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=v2.13.3
+VERSION=v2.14.2
 
 kubectl create namespace argocd
 
