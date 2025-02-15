@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: rook-ceph
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: Rook Ceph Project
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+    - "https://github.com/n4ch3t3/homelab.git"
+  destinations:
+    - namespace: rook-ceph
+      server: https://kubernetes.default.svc
